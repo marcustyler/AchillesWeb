@@ -1255,15 +1255,25 @@
 
 	<div id="reportMyReport" class="report">
 		<div class="reportTitle">My Report</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						My report test column
+		<div class="col-sm-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					CDM Summary
+				</div>
+				<div class="panel-body">
+					<div class="col-sm-12 personSummary">
+						<div data-bind="template: {if: dashboardData, name: 'attributeValueTable', data: function() { return dashboardData().SUMMARY}}"></div>
 					</div>
-					<div class="panel-body">
-						<div id="genderPie"></div>
-					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Population by Gender
+				</div>
+				<div class="panel-body">
+					<div id="genderPie" style="text-align:center"></div>
 				</div>
 			</div>
 		</div>
