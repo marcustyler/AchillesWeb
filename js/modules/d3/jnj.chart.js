@@ -761,6 +761,24 @@
 					})
 					.attr("text-anchor", "middle");
 			}
+			
+			if (options.showCounts) {
+				svg.selectAll(".barlabel")
+					.data(data)
+					.enter()
+					.append("text")
+					.attr("class", "barlabel")
+					.text(function (d) {
+						return intFormat(d[value]);
+					})
+					.attr("x", function (d) {
+						return x(d[label]) + x.rangeBand() / 2;
+					})
+					.attr("y", function (d) {
+						return y(d[value]) - 3;
+					})
+					.attr("text-anchor", "middle");
+			}
 
 			$(window).on("resize", {
 					container: $(target),

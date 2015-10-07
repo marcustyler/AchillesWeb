@@ -615,7 +615,6 @@
 					viewModel.datasource(viewModel.datasources[0]);
 					app.run('#/' + viewModel.datasource().name + '/dashboard');
 				});
-
 			});
 		});
 	});

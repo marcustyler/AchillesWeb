@@ -1254,26 +1254,38 @@
 	</div>
 
 	<div id="reportMyReport" class="report">
-		<div class="reportTitle">My Report</div>
-		<div class="col-sm-4">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					CDM Summary
-				</div>
-				<div class="panel-body">
-					<div class="col-sm-12 personSummary">
-						<div data-bind="template: {if: dashboardData, name: 'attributeValueTable', data: function() { return dashboardData().SUMMARY}}"></div>
+		<div class="reportTitle">Geography</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Population by State (Top 10)
+					</div>
+					<div class="panel-body">
+						<div id="statePie" style="text-align:center"></div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Population by Gender
+			<div class="col-sm-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Office Visits by State per Capita (Top 10 by Population)
+					</div>
+					<div class="panel-body">
+						<div id="visitsBarPop" style="text-align:left">
+						</div>
+					</div>
 				</div>
-				<div class="panel-body">
-					<div id="genderPie" style="text-align:center"></div>
+			</div>
+			<div class="col-sm-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Office Visits by State per Capita (Top 10 by Visits)
+					</div>
+					<div class="panel-body">
+						<div id="visitsBarLift" style="text-align:left">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
