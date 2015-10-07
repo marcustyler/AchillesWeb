@@ -650,6 +650,7 @@
 				colors: d3.scale.category10(),
 				textAnchor: 'middle',
 				showLabels: false
+				showCounts: false
 			};
 
 			var options = $.extend({}, defaults, options);

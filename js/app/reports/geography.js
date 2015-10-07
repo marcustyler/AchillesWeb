@@ -13,8 +13,8 @@
 			}).done(function (result) {
 				
 				// population by state
-				genderDonut = new jnj_chart.donut();
-				genderDonut.render(common.mapConceptData(result.POPULATION_BY_STATE), "#reportGeography #statePie", 260, 160, {
+				stateDonut = new jnj_chart.donut();
+				stateDonut.render(common.mapConceptData(result.POPULATION_BY_STATE), "#reportGeography #statePie", 260, 160, {
 					colors: d3.scale.ordinal()
 						.domain([1,2,3,4,5,6,7,8,9,10,11])
 						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000","#006400","#BDB76B","#9932CC","#AFEEEE","#FF8C00","#A9A9A9"]),

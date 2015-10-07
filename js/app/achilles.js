@@ -437,6 +437,116 @@
 					xLabel: 'Year',
 					yLabel: 'People'
 				});
+				
+				// Condition Pie Charts by Cohort
+				conditionDonut1 = new jnj_chart.donut();
+				conditionDonut1.render(common.mapConceptData(result.GENDER_FEMALE), "#reportPerson #conditionsGenderPieF", 260, 160, {
+					colors: d3.scale.ordinal()
+						.domain([1,2,3,4,5,6,7,8,9,10])
+						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000","#006400","#BDB76B","#9932CC","#AFEEEE","#FF8C00"]),
+					margin: {
+						top: 5,
+						bottom: 10,
+						right: 150,
+						left: 10
+					}
+				});
+				conditionDonut2 = new jnj_chart.donut();
+				conditionDonut2.render(common.mapConceptData(result.GENDER_MALE), "#reportPerson #conditionsGenderPieM", 260, 160, {
+					colors: d3.scale.ordinal()
+						.domain([1,2,3,4,5,6,7,8,9,10])
+						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000","#006400","#BDB76B","#9932CC","#AFEEEE","#FF8C00"]),
+					margin: {
+						top: 5,
+						bottom: 10,
+						right: 150,
+						left: 10
+					}
+				});
+				conditionDonut3 = new jnj_chart.donut();
+				conditionDonut3.render(common.mapConceptData(result.RACE_HISP), "#reportPerson #conditionsRacePieH", 260, 160, {
+					colors: d3.scale.ordinal()
+						.domain([1,2,3,4,5])
+						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000"]),
+					margin: {
+						top: 5,
+						bottom: 10,
+						right: 150,
+						left: 10
+					}
+				});
+				conditionDonut4 = new jnj_chart.donut();
+				conditionDonut4.render(common.mapConceptData(result.RACE_WHITE), "#reportPerson #conditionsRacePieW", 260, 160, {
+					colors: d3.scale.ordinal()
+						.domain([1,2,3,4,5,6,7,8,9,10,11])
+						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000","#006400","#BDB76B","#9932CC","#AFEEEE","#FF8C00","#A9A9A9"]),
+					margin: {
+						top: 5,
+						bottom: 10,
+						right: 150,
+						left: 10
+					}
+				});
+				conditionDonut5 = new jnj_chart.donut();
+				conditionDonut5.render(common.mapConceptData(result.RACE_BLACK), "#reportPerson #conditionsRacePieB", 260, 160, {
+					colors: d3.scale.ordinal()
+						.domain([1,2,3,4,5,6,7,8,9])
+						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000","#006400","#BDB76B","#9932CC","#AFEEEE"]),
+					margin: {
+						top: 5,
+						bottom: 10,
+						right: 150,
+						left: 10
+					}
+				});
+				conditionDonut6 = new jnj_chart.donut();
+				conditionDonut6.render(common.mapConceptData(result.RACE_OTHER), "#reportPerson #conditionsRacePieO", 260, 160, {
+					colors: d3.scale.ordinal()
+						.domain([1,2,3,4,5])
+						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000"]),
+					margin: {
+						top: 5,
+						bottom: 10,
+						right: 150,
+						left: 10
+					}
+				});
+				conditionDonut7 = new jnj_chart.donut();
+				conditionDonut7.render(common.mapConceptData(result.ETHNICITY_HISPANIC), "#reportPerson #conditionsEthnicityPieH", 260, 160, {
+					colors: d3.scale.ordinal()
+						.domain([1,2,3,4,5])
+						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000"]),
+					margin: {
+						top: 5,
+						bottom: 10,
+						right: 150,
+						left: 10
+					}
+				});
+				conditionDonut8 = new jnj_chart.donut();
+				conditionDonut8.render(common.mapConceptData(result.ETHNICITY_NOTHISPANIC), "#reportPerson #conditionsEthnicityPieN", 260, 160, {
+					colors: d3.scale.ordinal()
+						.domain([1,2,3,4,5,6,7,8,9,10])
+						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000","#006400","#BDB76B","#9932CC","#AFEEEE","#FF8C00"]),
+					margin: {
+						top: 5,
+						bottom: 10,
+						right: 150,
+						left: 10
+					}
+				});
+				conditionDonut9 = new jnj_chart.donut();
+				conditionDonut9.render(common.mapConceptData(result.ETHNICITY_OTHER), "#reportPerson #conditionsEthnicityPieO", 260, 160, {
+					colors: d3.scale.ordinal()
+						.domain([1,2,3,4,5])
+						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000"]),
+					margin: {
+						top: 5,
+						bottom: 10,
+						right: 150,
+						left: 10
+					}
+				});
 			});
 		}
 
