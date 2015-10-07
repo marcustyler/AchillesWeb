@@ -649,7 +649,7 @@
 				rotate: 0,
 				colors: d3.scale.category10(),
 				textAnchor: 'middle',
-				showLabels: false
+				showLabels: false,
 				showCounts: false
 			};
 
