@@ -4,17 +4,17 @@
 
 		module.render = function (datasource) {
 		
-			$('#reportMyReport svg').remove();
+			$('#reportGeography svg').remove();
 
 			$.ajax({
 				type: "GET",
-				url:  getUrlFromData(datasource, "myreport"),
+				url:  getUrlFromData(datasource, "geography"),
 				contentType: "application/json; charset=utf-8",
 			}).done(function (result) {
 				
 				// population by state
 				genderDonut = new jnj_chart.donut();
-				genderDonut.render(common.mapConceptData(result.POPULATION_BY_STATE), "#reportMyReport #statePie", 260, 160, {
+				genderDonut.render(common.mapConceptData(result.POPULATION_BY_STATE), "#reportGeography #statePie", 260, 160, {
 					colors: d3.scale.ordinal()
 						.domain([1,2,3,4,5,6,7,8,9,10,11])
 						.range(["#FFD700","#00008B","#8FBC8F","#DB7093","#8B0000","#006400","#BDB76B","#9932CC","#AFEEEE","#FF8C00","#A9A9A9"]),
@@ -30,7 +30,7 @@
 				var width = 260;
 				var height = 160;
 				visitsBar = new jnj_chart.barchart();
-				visitsBar.render(common.mapConceptData(result.VISITS_BY_STATE_PER_CAPITA_POP_SORT), "#reportMyReport #visitsBarPop", width, height, {
+				visitsBar.render(common.mapConceptData(result.VISITS_BY_STATE_PER_CAPITA_POP_SORT), "#reportGeography #visitsBarPop", width, height, {
 					colors: d3.scale.ordinal()
 						.domain([1,2,3,4,5,6,7,8,9,10,11])
 						.range(["#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4"]),
@@ -47,7 +47,7 @@
 				var width = 260;
 				var height = 160;
 				visitsBar = new jnj_chart.barchart();
-				visitsBar.render(common.mapConceptData(result.VISITS_BY_STATE_PER_CAPITA_LIFT_SORT), "#reportMyReport #visitsBarLift", width, height, {
+				visitsBar.render(common.mapConceptData(result.VISITS_BY_STATE_PER_CAPITA_LIFT_SORT), "#reportGeography #visitsBarLift", width, height, {
 					colors: d3.scale.ordinal()
 						.domain([1,2,3,4,5,6,7,8,9,10,11])
 						.range(["#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4"]),

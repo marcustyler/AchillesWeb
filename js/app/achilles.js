@@ -587,15 +587,15 @@
 					report = 'death';
 				});
 
-				this.get('#/:name/myreport', function (context) {
+				this.get('#/:name/geography', function (context) {
 					$('.report').hide();
 					viewModel.datasource(viewModel.datasources.filter(function (d) {
 						return d.name == this.params['name'];
 					}, this)[0]);
 
-					reports.MyReport.render(viewModel.datasource());
-					$('#reportMyReport').show();
-					report = 'myreport';
+					reports.Geography.render(viewModel.datasource());
+					$('#reportGeography').show();
+					report = 'geography';
 				});
 
 			});
@@ -620,7 +620,7 @@
 	});
 })();
 
-var	simpledata = [ "achillesheel", "condition_treemap", "conditionera_treemap", "dashboard", "datadensity", "death", "drug_treemap", "drugera_treemap", "observation_treemap", "observationperiod", "person", "procedure_treemap", "visit_treemap", "myreport"];
+var	simpledata = [ "achillesheel", "condition_treemap", "conditionera_treemap", "dashboard", "datadensity", "death", "drug_treemap", "drugera_treemap", "observation_treemap", "observationperiod", "person", "procedure_treemap", "visit_treemap", "geography"];
 var collectionFormats = {
 	"conditioneras" : "condition_{id}.json",
 	"conditions" 	: "condition_{id}.json",
